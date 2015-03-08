@@ -5,8 +5,8 @@
 (def Carrinho
   "Um schema para um carrinho de compras"
   '{:itens [{:nome str
-             :quantidade (and int pos)
-             :valor (and num pos)}]
+             :quantidade (int 0 10000)
+             :valor (num 0 10000)}]
     :status (or :abandonado :em-uso :comprado)})
 
 (defn quantidade-itens [carrinho]
